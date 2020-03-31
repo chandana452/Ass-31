@@ -1,0 +1,44 @@
+ class Employee
+    {
+        int Id;
+        String Name;
+        double Salary;
+        Employee(int id,String name,double salary)
+        {
+            Id = id;
+            Name = name;
+            Salary = salary;
+        }
+        void PutData()
+        {
+            System.out.print("\nEmployee Id : " + Id);
+            System.out.print("\nEmployee Name : " + Name);
+            System.out.print("\nEmployee Salary : " + Salary);
+        }
+    }
+    class Company extends Employee
+    {
+        int RegNo;
+        String CName;
+        Company(int regno,String cname,int id,String name,double salary)
+        {
+            super(id,name,salary);      
+            RegNo = regno;
+            CName = cname;
+        }
+        void WriteData()
+        {
+            System.out.print("\nRegistration No. : " + RegNo);
+            System.out.print("\nCompany Name : " + CName);
+        }
+    }
+
+    class SuperCalling
+    {
+        public static void main(String args[])
+        {
+            Company C = new Company(168,"HCL",07,"chandana",20000); 
+            C.PutData();
+            C.WriteData();
+        }
+    }
