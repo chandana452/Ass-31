@@ -1,0 +1,46 @@
+public class Customer{
+	private int customerid;
+	private String customername;
+	private String customeraddress;
+	private long creditcardnumber;
+	private long mobilenumber;
+	private String productname;
+	private double price;
+	private int quantity;
+	public cust(int customerid, String customername, String customeraddress, long creditcardnumber,long mobilenumber, String productname,
+			double price, int quantity) {
+		super();
+		this.customerid = customerid;
+		this.customername = customername;
+		this.customeraddress = customeraddress;
+		this.creditcardnumber = creditcardnumber;
+		this.mobilenumber=mobilenumber;
+		this.productname = productname;
+		this.price = price;
+		this.quantity = quantity;
+	}
+	public static void main(String args[])
+{
+	Cst e=new cst(1,"chandu","vijayawada",7524521236,8088663214,"magie",10.0,2);
+	e.displaydetails();
+	e.calrate();
+	
+	
+}
+public double calrate()
+{
+	double rate=price*(double)quantity;
+	System.out.println("calculated rate is:"+rate);
+	return rate;
+	
+	
+	
+}
+public void displaydetails() 
+{
+	System.out.println("customer details are:");
+	System.out.println("customer id:"+customerid+"\ncustomername:"+customername+"\ncustomeraddress:"+customeraddress+"\ncreditcardnumber:"+creditcardnumber+"\nmobilenumber:"+mobilenumber+"\nproductname:"+productname+"\nquantity:"+quantity+"\nprice:"+price);
+	
+}
+	
+}
